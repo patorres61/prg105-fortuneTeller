@@ -1,5 +1,7 @@
 # Phyllis Torres
 # Fortune Teller - Monty Python Style
+# This program allows a user to input questions and generates random answers from the list of responses that are
+# included in the program with a Monty Python theme.
 
 # import the random library
 import random
@@ -29,15 +31,15 @@ response = ["Romani ite domum - Romans go home!", "Blessed are the cheesemakers.
             "It's just a flesh wound!", "Why don't you have another vat of wine, dear?", "You know, you came from nothing, your're going back to nothing. So, what have you lost? Nothing!",
             "He put Basil in the ratatouille!", "Or led by a bottle, more like!", "We are the knights who say...'Ni'!"]
 
-# Random Choice
+# Random Choice and save selection in variable named answer
 # Reference: https://docs.python.org/2/library/random.html
 selection = random.choice(response)
 answer = selection
 
-# program title, describe the program and print instructions for the user
+# program title, describe the program's purpose, and print instructions for the user
 print color.BOLD + '                                        Fortune Telling...Monty Python Style\n\n' + color.END
 print ('\n\nThis program is channeling the formidable, albeit ludicrous, spirit of Monty Python. Clear your mind and focus on your most burning desires.\n')
-print ('Now, if you are truly courageous and ready to hear your fate, you may ask the spirit your question.\n'
+print ('Now, if you are truly courageous and ready to hear your fate, you may ask the spirit your questions.\n'
        '\nRemember, only ask if you dare!')
 
 # accept the user's question as input
@@ -46,6 +48,7 @@ question = raw_input('\nOk, you have been warned! What is your question? \n')
 # print the randomized answer
 print answer
 
+# ask the user if they would like to keep going and set the switch with their response
 keepGoing = raw_input("\nWould you like to ask another question? Enter the word 'yes' to continue or 'no' to stop. ")
 
 # the variable, keepGoing, will keep track of whether or not the user wants to keep asking questions
